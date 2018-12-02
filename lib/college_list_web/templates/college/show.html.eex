@@ -1,0 +1,6 @@
+<h1><%= @college.name %></h1>
+<div class="college college">
+  <p class="college__state">
+    <%= @college.state %>
+  </p>
+</div>

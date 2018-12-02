@@ -1,0 +1,15 @@
+<section class="collegelist">
+  <h3>Add College <%= link "+", to: Routes.college_path(@conn, :new) %></h3>
+  <ul class="grid">
+    <%= for college <- @colleges do %>
+      <li class="grid­item">
+        <div class="college">
+          <%= link to: Routes.college_path(@conn, :show, college.id) do %>
+            <h2 class="college__name"><%= college.name %></h2>
+          <% end %>
+          <span class="college__state"><%= college.state %></span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
