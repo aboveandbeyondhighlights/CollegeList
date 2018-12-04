@@ -48,7 +48,7 @@ defmodule CollegeListWeb.CollegeController do
 
   def delete(conn, %{"id" => id}) do
     college = CollegeList.get_college(id)
-    {:ok, _college} = CollegeList.Repo.delete(college)
+    {:ok, _college} = CollegeList.delete_college(college)
 
     conn
     |> put_flash(:info, "College deleted successfully")
