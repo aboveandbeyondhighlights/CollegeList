@@ -2,7 +2,20 @@
 <h1><%= @college.name %></h1>
 <div class="college college">
   <p class="college__state">
+    <%= @college.city%>,
     <%= @college.state %>
+  </p>
+  <p class="college__state">
+    Conference: <%= @college.conference %>
+  </p>
+  <p class="college__state">
+    Nickname: <%= @college.nickname %>
+  </p>
+  <p class="college__state">
+    Type: <%= @college.type %>
+  </p>
+  <p class="college__state">
+    Website: <%= @college.website%>
   </p>
   <%= link "Edit", to: Routes.college_path(@conn, :edit, @college.id), class: "btn btn-default" %>
   <%= link "Delete", to: Routes.college_path(@conn, :delete, @college), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger" %>
